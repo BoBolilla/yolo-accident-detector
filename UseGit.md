@@ -15,7 +15,6 @@ git checkout -b feature/yourname  # 推荐分支命名规范
 # 修改代码后提交
 git add .
 git commit -m "完成xxx功能（具体描述变更内容）"
-
 ```
 
 #### 4. 推送分支到远程
@@ -28,9 +27,25 @@ git push -u origin feature/yourname
 ```
 
 #### 5. 创建Pull Request（PR）
+
+> ### **PR 就像「代码的请假条」**
+>
+> 想象小组在共同编辑一份**电子文档**（比如腾讯文档）：
+>
+> 1. **直接改主文档** ❌
+>    - 如果所有人同时乱改，文档会一团糟（代码冲突/错误）
+> 2. **PR 的工作方式** ✅
+>    - 你：把要改的内容**先复制一份**（你的分支），在自己的副本里修改
+>    - 改完后，提交一个「申请」说：*“我改好了，请组长检查一下再合并到主文档”* → 这就是 PR！
+
 - 在GitHub网页端操作
-- 选择 Compare & pull request
-- 填写清晰的PR描述（做了什么/为什么修改/测试情况）
+
+- 选择 `New pull request`
+
+  ![image-20250424132710226](assets/UseGit/image-20250424132710226.png)
+
+- 这里的`compare`选择你自己创建的`feature/yourname`分支对比，对比更改后填写PR描述即可，PR描述就是你负责的部分完成了什么功能，效果怎样![image-20250424132800837](assets/UseGit/image-20250424132800837.png)
+
 - 关联相关Issue（如有）
 
 
