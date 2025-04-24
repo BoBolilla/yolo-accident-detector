@@ -40,11 +40,11 @@ git push -u origin feature/yourname
 
 - 在GitHub网页端操作
 
-- 选择 `New pull request`
+- 选择 `Compare & pull request`
 
-  ![image-20250424132710226](assets/UseGit/image-20250424132710226.png)
+  ![image-20250424212722040](assets/UseGit/image-20250424212722040.png)
 
-- 这里的`compare`选择你自己创建的`feature/yourname`分支对比，对比更改后填写PR描述即可，PR描述就是你负责的部分完成了什么功能，效果怎样![image-20250424132800837](assets/UseGit/image-20250424132800837.png)
+- 这里的`compare`选择你自己创建的`feature/yourname`分支对比，对比更改后填写PR描述即可，PR描述就是你负责的部分完成了什么功能，效果怎样![image-20250424213026615](assets/UseGit/image-20250424213026615.png)
 
 - 关联相关Issue（如有）
 
