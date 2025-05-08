@@ -1,5 +1,17 @@
+<<<<<<< HEAD
 train: Accident_Detection.v1i.yolov8/train/images
 val: Accident_Detection.v1i.yolov8/valid/images
 test: Accident_Detection.v1i.yolov8/test/images
+||||||| 87048bc
+train: E:/Reproduce/data/Accident_Detection.v4i.yolov8/train/images  # train images (relative to 'path') 128 images
+val: E:/Reproduce/data/Accident_Detection.v4i.yolov8/valid/images  # val images (relative to 'path') 128 images
+test: E:/Reproduce/data/Accident_Detection.v4i.yolov8/test/images
+
+=======
+train: D:/Download/JetBrains/pythonProject/Accident_Detection.v4i.yolov11/train/images  # train images (relative to 'path') 128 images
+val: D:/Download/JetBrains/pythonProject/Accident_Detection.v4i.yolov11/valid/images  # val images (relative to 'path') 128 images
+test: D:/Download/JetBrains/pythonProject/Accident_Detection.v4i.yolov11/test/images
+
+>>>>>>> 4bb293e4ec5897052deb7b32a111011aa1b8ed1f
 nc: 1
 names: ['accident']
