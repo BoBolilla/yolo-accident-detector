@@ -1,9 +1,12 @@
+import os
+os.environ['KMP_DUPLICATE_LIB_OK'] = 'TRUE'  # 必须放在所有导入之前！
+
 import warnings
 warnings.filterwarnings('ignore')
 from ultralytics import YOLO
 if __name__ == '__main__':
-  model = YOLO('ultralytics/cfg/models/v8/yolov8n.yaml')
-  model.load('yolov8n.pt')  #注释则不加载
+  model = YOLO('ultralytics/cfg/models/11/yolo11.yaml')
+  model.load('yolo11n.pt')  #注释则不加载
   results = model.train(
     data='accident.yaml',  #数据集配置文件的路径
     epochs=200,  #训练轮次总数
