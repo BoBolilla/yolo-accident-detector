@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# 数据集路径
+accident.yaml
+
 # C extensions
 *.so
 
