@@ -10,8 +10,6 @@ from pathlib import Path
 import torch
 import torch.nn as nn
 
-from ultralytics.nn.modules import GhostConv
-
 from ultralytics.nn.autobackend import check_class_names
 from ultralytics.nn.modules import (
     AIFI,
@@ -99,6 +97,7 @@ try:
 except ImportError:
     thop = None  # conda support without 'ultralytics-thop' installed
 
+from ultralytics.nn.attention.MHSA import MHSA
 
 class BaseModel(torch.nn.Module):
     """The BaseModel class serves as a base class for all the models in the Ultralytics YOLO family."""
@@ -1400,7 +1399,6 @@ def parse_model(d, ch, verbose=True):  # model_dict, input_channels(3)
             SCDown,
             C2fCIB,
             A2C2f,
-            GhostConv
         }
     )
     repeat_modules = frozenset(  # modules with 'repeat' arguments
@@ -1451,6 +1449,8 @@ def parse_model(d, ch, verbose=True):  # model_dict, input_channels(3)
                 legacy = False
                 if scale in "mlx":
                     args[3] = True
+        elif m in {MHSA}:
+            args=[ch[f],*args]
             if m is A2C2f:
                 legacy = False
                 if scale in "lx":  # for L/X sizes
